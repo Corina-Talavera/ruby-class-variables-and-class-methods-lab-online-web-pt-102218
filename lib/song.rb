@@ -15,3 +15,4 @@ attr_accessor :name, :artist, :genre
   def self.genre
     @@genre
   end
+end  
