@@ -11,3 +11,4 @@ end
  def self.genres
     @@genres.uniq
  end
+ ## .unique is how you call a unique Array
