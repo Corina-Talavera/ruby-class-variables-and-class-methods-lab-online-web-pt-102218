@@ -30,4 +30,5 @@ end
   Song.new("99 Problems", "Jay-Z", "rap")
   Song.new("hit me baby one more time", "Brittany Spears", "pop")
 end
-puts song.genre
+Song.genre_count
+puts Song.genre_count
