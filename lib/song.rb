@@ -6,4 +6,4 @@ class Song
   end 
 end
  @@genres = []
- ## Define genres 
+ ## Define genres to an empty array
