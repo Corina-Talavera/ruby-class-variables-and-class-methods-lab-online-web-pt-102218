@@ -1,2 +1,3 @@
 class Song 
-  @@song = 30
+Song.count
+  # => 30
