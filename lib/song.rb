@@ -1,21 +1,39 @@
-class Song
+class Song 
   @@count = 0
+  
   def self.count 
     @@count
   end 
+  @@genres = []
 
- @@genres = []
- ## Define genres to an empty Array
- 
- def self.genres
+  def self.genres
     @@genres.uniq
- end
- ## .unique is how you call a unique Array
- 
- @@artists = []
-   def self.artists
+  end
+  def self.genre_count
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end 
+  def self.genre_count
+    genre_count = {}
+    @@genres.each do |genre|
+      if genre_count[genre]
+        genre_count[genre] += 1 
+      else
+        genre_count[genre] = 1
+      end
+    end
+    genre_count
+  end
+  
+  @@artists = []
+  
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end
+  
+  def self.artists
     @@artists.uniq
   end
+  
   def initialize(name, artist, genre)
     @name = name
     @artist = artist
@@ -25,10 +43,7 @@ class Song
     @@count += 1
   end
   attr_accessor :name, :artist, :genre
-end
+end 
   Song.new("Lucifer", "Jay-Z", "rap" )
   Song.new("99 Problems", "Jay-Z", "rap")
   Song.new("hit me baby one more time", "Brittany Spears", "pop")
-end
-Song.genre_count
-puts Song.genre_count
