@@ -4,7 +4,7 @@ class Song
   def self.count 
     @@count
   end 
-end
+
  @@genres = []
  ## Define genres to an empty Array
  
@@ -14,3 +14,6 @@ end
  ## .unique is how you call a unique Array
  
  @@artists = []
+   def self.artists
+    @@artists.uniq
+  end
