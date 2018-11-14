@@ -4,4 +4,6 @@ class Song
   def self.count 
     @@count
   end 
-end  
+end
+ @@genres = []
+ ## Define genres 
