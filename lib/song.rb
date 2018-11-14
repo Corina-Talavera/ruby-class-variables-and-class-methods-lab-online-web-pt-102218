@@ -6,4 +6,8 @@ class Song
   end 
 end
  @@genres = []
- ## Define genres to an empty array
+ ## Define genres to an empty Array
+ 
+ def self.genres
+    @@genres.uniq
+ end
