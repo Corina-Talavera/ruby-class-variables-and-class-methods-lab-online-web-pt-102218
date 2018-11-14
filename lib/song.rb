@@ -3,3 +3,5 @@ Song.count
   # => 30
 Song.artists
   # => ["Jay-Z", "Drake", "Beyonce"]
+Song.genres
+  # => ["Rap", "Pop"]
