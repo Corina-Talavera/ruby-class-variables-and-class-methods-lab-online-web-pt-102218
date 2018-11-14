@@ -8,4 +8,5 @@ attr_accessor :name, :artist, :genre
     @@count
   end  
 @@artist
+  def initliaze
 @@genre
