@@ -1,6 +1,4 @@
 class Song
-  attr_accessor :name, :artist, :genre
-  end
   @@count = 0
   
   def self.count 
@@ -19,6 +17,16 @@ class Song
    def self.artists
     @@artists.uniq
   end
+  def initialize(name, artist, genre)
+    @name = name
+    @artist = artist
+    @@artists << artist
+    @genre = genre
+    @@genres << genre
+    @@count += 1
+  end
+  attr_accessor :name, :artist, :genre
+end
   Song.new("Lucifer", "Jay-Z", "rap" )
   Song.new("99 Problems", "Jay-Z", "rap")
   Song.new("hit me baby one more time", "Brittany Spears", "pop")
