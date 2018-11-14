@@ -1,12 +1,12 @@
 class Song 
 attr_accessor :name, :artist, :genre
 @@count = 30
-  def count=(date)
-    @count = date
+  def count=(30)
+    @count = 30
   end
  
-  def release_date
-    @release_date
+  def count
+    @count
   end
 end
 @@artist
