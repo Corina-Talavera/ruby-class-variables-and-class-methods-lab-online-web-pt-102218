@@ -30,8 +30,17 @@ class Song
     @@artists.inject(artist.new(0)) { |total, i| total[i] += 1 ;total}
   end
   
-  def self.artists
-    @@artists.uniq
+  def self.artist_count
+    artist_hash = Hash.new
+
+    @@artists.each do |artist|
+      if artist_hash[artist] == nil
+        artist_hash[artist] = 1
+      else
+        artist_hash[artist] += 1
+      end
+    end
+    return artist_hash
   end
   
   def initialize(name, artist, genre)
