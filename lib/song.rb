@@ -9,9 +9,11 @@ class Song
   def self.genres
     @@genres.uniq
   end
+.
   def self.genre_count
-    @@genres
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
   end 
+  
   def self.genre_count
     genre_count = {}
     @@genres.each do |genre|
@@ -25,18 +27,13 @@ class Song
   end
   
   @@artists = []
-
+  
   def self.artist_count
-    artist_hash = Hash.new
-
-    @@artists.each do |artist|
-      if artist_hash[artist] == nil
-        artist_hash[artist] = 1
-      else
-        artist_hash[artist] += 1
-      end
-    end
-    return artist_hash
+    @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end
+  
+  def self.artists
+    @@artists.uniq
   end
   
   def initialize(name, artist, genre)
