@@ -27,15 +27,7 @@ class Song
   @@artists = []
   
   def self.artist_count
-    artist_count = hash.new
-        @@artists.each do |artist|
-      if artist_hash[artist] == nil
-        artist_hash[artist] = 1
-      else
-        artist_hash[artist] += 1
-      end
-    end
-    return artist_hash
+    @@artists.inject(hash.new(0)) { |total, i| total[i] += 1 ;total}
   end
   
   def self.artists
