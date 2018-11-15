@@ -82,7 +82,3 @@ describe "Song" do
     end
   end
 end
-Song.genres
-Song.artists
-Song.genre_count
-Song.artist_count
