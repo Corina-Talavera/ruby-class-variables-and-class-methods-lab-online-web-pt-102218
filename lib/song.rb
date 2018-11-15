@@ -27,7 +27,7 @@ class Song
   @@artists = []
   
   def self.artist_count
-    @@artists.inject(Hash.new(0))
+    artist_hash = Hash.new
   end
   
   def self.artists
